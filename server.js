@@ -1,4 +1,4 @@
-require("dotenv").config;
+require("dotenv").config();
 // External Modules
 const express = require("express");
 const methodOverride = require("method-override");
@@ -30,13 +30,15 @@ app.use((req, res, next) => {
 // Routes & Controllers
 // Home routes
 app.get("/", (req, res) => {
-    res.send("<h1>Welcome to this blog app!</h1>")
+    res.render("index")
 });
 
 // 404 Routes
 app.get((req, res) => {
     res.send("404 Error! Page not found :(")
 });
+
+app.use("/authors", routes.authors);
 
 // Server Listener
 app.listen(PORT, () => {

@@ -2,8 +2,8 @@
 const mongoose = require("mongoose");
 // shortcut to mongoose.connection object created by mongoose.connect
 const db = mongoose.connection;
-// const dbUrl = process.env.DATABASE_URL;
-const dbUrl = 'mongodb://localhost:27017/express-blog';
+const dbUrl = process.env.DATABASE_URL;
+// const dbUrl = 'mongodb://localhost:27017/express-blog';
 // nodemon
 
 mongoose
